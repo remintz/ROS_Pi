@@ -1,4 +1,10 @@
-# Instructions
+# ROS-Pi
+
+This repository contains the scripts to install the [Robot Operating System - ROS](https://www.ros.org/) on a Raspberry Pi using docker containers.
+
+It is currently based on the ROS version **Melodic**.
+
+## Instructions
 
 1) Start the Raspberry Pi with a new SD card with raspian-stretch-lite installed and make sure you have internet access from it.
 2) Run the following commands to setup and install Docker
