@@ -149,7 +149,7 @@ pip3 install docker-compose==1.23.2
 ## copy files
 #####################################################################################
 cd $NEW_HOME
-cp $REPO_DIR/Dockefile .
+cp $REPO_DIR/Dockerfile .
 cp $REPO_DIR/docker-compose.yml .
 
 #####################################################################################
