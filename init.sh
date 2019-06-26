@@ -123,6 +123,15 @@ fi
 ## Install docker
 #####################################################################################
 cd $TMP_DIR
+
+sudo apt-get -y install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg2 \
+    software-properties-common
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+
 curl -sSL https://get.docker.com | sh
 usermod -aG docker acn-iot
 
@@ -130,8 +139,18 @@ usermod -aG docker acn-iot
 ## Install docker-compose
 #####################################################################################
 cd $TMP_DIR
+sudo apt-get -y install python-setuptools && sudo easy_install pip
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && sudo python3 get-pip.py
-sudo pip3 install docker-compose
+apt-get install -y python-dev python3-dev python-setuptools python3-setuptools
+sudo pip3 install requests==2.14.2
+pip3 install docker-compose==1.23.2
+
+#####################################################################################
+## copy files
+#####################################################################################
+cd $NEW_HOME
+cp $REPO_DIR/Dockefile .
+cp $REPO_DIR/docker-compose.yml .
 
 #####################################################################################
 ## Set up new hostname
