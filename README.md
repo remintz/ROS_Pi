@@ -11,7 +11,7 @@ It is currently based on the ROS version **Melodic**.
 `
 sudo apt-get update
 sudo apt-get install -y git
-git clone https://innersource.accenture.com/scm/in2016/ros_pi.git
+git clone https://github.com/remintz/ROS_Pi.git
 cd ros-pi
 sudo bash init.sh
 `
